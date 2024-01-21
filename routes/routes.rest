@@ -1,0 +1,18 @@
+// localhost
+###
+GET http://localhost:3000/contacts
+###
+GET http://localhost:3000/contacts/65ac13346f2e23a3b28d7653
+###
+GET http://localhost:3000/contacts/65ac1b436f2e23a3b28d7655
+###
+GET http://localhost:3000/contacts/65ac1cff6f2e23a3b28d7656
+
+// production links
+GET https://cse-341-website.onrender.com/contacts
+
+GET https://cse-341-website.onrender.com/contacts/65ac13346f2e23a3b28d7653
+
+GET https://cse-341-website.onrender.com/contacts/65ac1b436f2e23a3b28d7655
+
+GET https://cse-341-website.onrender.com/contacts/65ac1cff6f2e23a3b28d7656
