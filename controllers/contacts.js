@@ -40,8 +40,8 @@ const createContact = async (req, res) => {
 };
 
 const updateContact = async (req, res) => {
+  console.log("Console Log Worked")
   const userId = new ObjectId(req.params.id);
-  // be aware of updateOne if you only want to update specific fields
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
@@ -49,11 +49,8 @@ const updateContact = async (req, res) => {
     favoriteColor: req.body.favoriteColor,
     birthday: req.body.birthday
   };
-  const response = await mongodb
-    .getDb()
-    .db('cse341')
-    .collection('contacts')
-    .replaceOne({ _id: userId }, contact);
+  console.log(contact);
+  const response = await mongodb.getDb().db('cse341').collection('contacts').replaceOne({ _id: userId }, contact);
   console.log(response);
   if (response.modifiedCount > 0) {
     res.status(204).send();

@@ -7,6 +7,8 @@ router.get('/', (req, res) =>{
     res.send(nameController.getMyName());
 });
 
+router.use('/', require('./swagger'));
+
 router.get('/sue', (req, res) =>{
     res.send(nameController.getSue());
 });
